@@ -1,6 +1,5 @@
 from leetcode_tester import LeetCodeTester, TreeNode
 from typing import Optional
-from collections import defaultdict
 
 # Definition for a binary tree node.
 # class TreeNode:

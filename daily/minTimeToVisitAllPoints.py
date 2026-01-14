@@ -1,4 +1,3 @@
-from math import exp
 from leetcode_tester import LeetCodeTester
 from typing import List
 
