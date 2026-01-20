@@ -1,7 +1,8 @@
+from typing import List
+
 class Solution:
     def maxSideLength(self, mat: List[List[int]], threshold: int) -> int:
         n, m = len(mat), len(mat[0])
-        length = min(n, m)
         ans = 0
         prefix = [[0] * (m+1) for _ in range(n+1)]
         for i in range(1, n+1):
