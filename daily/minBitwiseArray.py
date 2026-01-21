@@ -26,6 +26,24 @@ class Solution:
                 tmp += 1
         return ans
 
+# Optimized solution
+class Solution:
+    def minBitwiseArray(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        ans = [-1] * n
+        for i in range(n):
+            if nums[i] == 2:
+                ans[i] = -1
+            else:
+                tmp = 1
+                num = nums[i]
+                while num | 1 == num:
+                    tmp <<= 1
+                    num >>= 1
+                tmp >>= 1
+                ans[i] = nums[i] & ~tmp
+        return ans
+
 
 tester = LeetCodeTester(Solution)
 tester.add_test([2,3,5,7], expected=[-1,1,4,3])
